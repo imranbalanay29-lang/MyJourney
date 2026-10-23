@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std ;
+
+int main()
+{
+    int number1, number2 ;
+    char operation ;
+    
+    cout << "Enter first number: " ;
+    cin >> number1 ;
+    
+    cout << "Enter operation (+, _, *, /) : " ;
+    cin >> operation ;
+    
+    cout << "Enter second number: " ;
+    cin >> number2 ;
+    
+    if (operation == '+') {
+        cout << "Answer : " << number1 + number2 ;
+    } else if (operation == '-') {
+        cout << "Answer : " << number1 - number2 ;
+    } else if (operation == '*') {
+        cout << "Answer: " << number1 * number2 ;
+    } else if (operation == '/') {
+        cout << "Answer: " << number1 / number2 ;
+    } else {
+        cout << "The operation is not valid " ;
+    }
+    
+    
+    
+    return 0;
+}
