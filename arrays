@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A[10], B[10], C[10];
+    int size;
+    int minA, minB;
+
+    cout << "Enter array size: ";
+    cin >> size;
+
+    // Input first array
+    cout << "\nEnter elements of Array A:\n";
+    for (int i = 0; i < size; i++) {
+        cin >> A[i];
+    }
+
+    // Input second array
+    cout << "\nEnter elements of Ar  ray B:\n";
+    for (int i = 0; i < size; i++) {
+        cin >> B[i];
+    }
+
+    // A. Add the two arrays
+    cout << "\nA. Addition of two arrays:\n";
+    for (int i = 0; i < size; i++) {
+        C[i] = A[i] + B[i];
+        cout << C[i] << " ";
+    }
+
+    // B. Find maximum elements
+    cout << "\n\nB. Maximum elements:\n";
+    for (int i = 0; i < size; i++) {
+        if (A[i] > B[i]) {
+            C[i] = A[i];
+        }
+        else {
+            C[i] = B[i];
+        }
+
+        cout << C[i] << " ";
+    }
+
+    // C. Find minimum elements
+    minA = A[0];
+    minB = B[0];
+
+    for (int i = 0; i < size; i++) {
+        if (A[i] < minA) {
+            minA = A[i];
+        }
+
+        if (B[i] < minB) {
+            minB = B[i];
+        }
+    }
+
+    cout << "\n\nC. Minimum of Array A: " << minA;
+    cout << "\nMinimum of Array B: " << minB;
+    cout << "\nSum of minimum elements: " << minA + minB;
+
+    return 0;
+}
